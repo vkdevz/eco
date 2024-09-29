@@ -63,7 +63,7 @@ header nav a:hover::after {
 
 /* Hero Section Styles */
 .hero {
-    height: 90vh; /* Full viewport height */
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -430,52 +430,3 @@ footer {
 
 
 
-/* Apply Lato font to the whole webpage */
-body {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-/* Style headings with Lato */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 700; /* Bold weight for headings */
-}
-
-/* Style paragraphs with Lato */
-p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400; /* Normal weight for paragraphs */
-}
-
-
-/* Cart container */
-.cart-container {
-    width: 300px;
-    height: 300px;
-    background-color: #282828; /* Matching your dark theme */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    display: flex;
-    flex-direction: column; /* Aligning text below the icon */
-    justify-content: center;
-    margin: 50px;
-    align-items: center;
-    text-align: center; /* Centering text */
-}
-
-/* Cart icon */
-.cart-icon {
-    font-size: 150px; /* Larger icon size */
-    color: #f39c12; /* Bright color for cart icon */
-    margin-bottom: 20px; /* Space between icon and text */
-}
-
-/* Empty cart text */
-.empty-cart-text {
-    color: #ffffff; /* White text color for visibility */
-    font-size: 30px; /* Text size */
-    font-weight: 600; /* Bold text */
-}
