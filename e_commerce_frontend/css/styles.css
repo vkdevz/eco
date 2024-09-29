@@ -1,0 +1,481 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust the distance of the underline from the text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background: #ffc107; /* Color of the underline */
+    transform: scaleX(0); /* Initially hidden */
+    transition: transform 0.3s ease;
+}
+
+header nav a:hover::after {
+    transform: scaleX(1); /* Show underline on hover */
+}
+
+.cart {
+    background-color: #ffc107;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 90vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(45deg, #ff6b6b, #f4a689, #f76bd9, #6bff97);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Keyframes for background animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #4da2b1;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #0f3a4fbf;;
+}
+
+.btn-primary {
+    background-color: #ffc107;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}
+
+/* Featured Products Section */
+.collection-section {
+    padding: 40px 20px;
+    background-color: #f8f8f8; /* Light background color */
+    text-align: center;
+}
+
+.collection-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Space between items */
+}
+
+.product-item {
+    background-color: #fff; /* White background for product items */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px;
+    text-align: center;
+    width: 30%; /* Width of each product item */
+    transition: transform 0.3s;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-item p {
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: #333; /* Darker color for price */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #007BFF; /* Button color */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .product-item {
+        width: 45%; /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 90%; /* 1 item per row on very small screens */
+    }
+}
+
+
+/* About Us Section */
+.about-section {
+    padding: 80px 20px;
+    background-color: #ffffff; /* White background for a clean look */
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-container {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto;
+    color: #333; /* Dark gray text for good contrast */
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px; /* Increased margin for separation */
+    color: #444; /* Slightly lighter than the main text */
+    text-transform: uppercase; /* Maintain the uppercase styling */
+    letter-spacing: 1px; /* Reduced letter spacing for better aesthetics */
+    font-weight: bold; /* Make the heading bolder */
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6; /* Consistent line-height for better readability */
+    margin-bottom: 20px; /* Spacing between paragraphs */
+    color: #555; /* Medium gray for paragraph text */
+    text-align: justify; /* Justify text for a clean block look */
+}
+
+/* Optional: Add a subtle border at the bottom to visually separate sections */
+.about-section::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #333; /* Color for the separator line */
+    margin: 40px auto 0;
+    border-radius: 2px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffc107;
+    text-transform: uppercase;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 14px;
+    color: #b5b5b5;
+    line-height: 1.7;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #b5b5b5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffc107;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    padding: 10px;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #e0a800;
+}
+
+/* Social Media Links */
+.social-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-container a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-container a:hover {
+    color: #ffc107;
+    /* Change to any hover color */
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 20px;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-container {
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto;
+    color: #333; /* Dark gray text */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+.contact-section label {
+    font-weight: bold;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-section button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #555; /* Darker shade on hover */
+}
+
+
+
+/* Apply Lato font to the whole webpage */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style headings with Lato */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700; /* Bold weight for headings */
+}
+
+/* Style paragraphs with Lato */
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400; /* Normal weight for paragraphs */
+}
+
+
+/* Cart container */
+.cart-container {
+    width: 300px;
+    height: 300px;
+    background-color: #282828; /* Matching your dark theme */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: flex;
+    flex-direction: column; /* Aligning text below the icon */
+    justify-content: center;
+    margin: 50px;
+    align-items: center;
+    text-align: center; /* Centering text */
+}
+
+/* Cart icon */
+.cart-icon {
+    font-size: 150px; /* Larger icon size */
+    color: #f39c12; /* Bright color for cart icon */
+    margin-bottom: 20px; /* Space between icon and text */
+}
+
+/* Empty cart text */
+.empty-cart-text {
+    color: #ffffff; /* White text color for visibility */
+    font-size: 30px; /* Text size */
+    font-weight: 600; /* Bold text */
+}
